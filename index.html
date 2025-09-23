@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Sweet Didi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://i.ibb.co/XZtV8M37/backgrounds-image.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      color: #ff4f8b;
+      overflow: hidden;
+    }
+
+    .overlay {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 2rem;
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      max-width: 600px;
+      margin: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 5px #ffb6c1;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #333;
+      text-shadow: 1px 1px 2px #fff;
+    }
+
+    .photo {
+      width: 250px;
+      height: 250px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+      border: 5px solid #fff;
+      margin-top: 1.5rem;
+    }
+
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+      text-shadow: none;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Magical sparkles */
+    .sparkle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border-radius: 50%;
+      opacity: 0.8;
+      box-shadow: 0 0 8px 3px #ffb6c1, 0 0 12px 5px #ff69b4;
+      animation: float 6s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) translateX(0) scale(0.8);
+        opacity: 0.8;
+      }
+      50% {
+        transform: translateY(-150px) translateX(50px) scale(1);
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(0) translateX(0) scale(0.8);
+        opacity: 0.8;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sparkles -->
+  <div class="sparkle" style="top:10%; left:20%; animation-duration:5s;"></div>
+  <div class="sparkle" style="top:30%; left:70%; animation-duration:6s;"></div>
+  <div class="sparkle" style="top:50%; left:40%; animation-duration:7s;"></div>
+  <div class="sparkle" style="top:70%; left:60%; animation-duration:5.5s;"></div>
+  <div class="sparkle" style="top:20%; left:50%; animation-duration:6.5s;"></div>
+
+  <div class="overlay">
+    <h1>My Sweet Didi 💖</h1>
+
+    <p>
+      Hello pretty girl!
+      Thanks for coming by the way😊. Never cry in any problematic situation didi. I feel little unhappy when you cry😢. Keep smiling💕! I am always there for you. Call me when  you feel low or lonely I will be there for you😘. Always there to listen to your problems. Will keep your all scerets as top scerete😉. No need to think twice before sharing with me. May be I can't give solution for your problems but I am there to hear them😁. Never be upset or sad even if you are in your periods and struggling with pain you can always call me or text me🥰.
+    </p>
+
+    <img src="https://i.ibb.co/yc5MFgZ8/sunshine-1.jpg" alt="My Didi" class="photo" />
+  </div>
+
+  <div class="footer">
+    Made with ❤ by your Shreya
+  </div>
+</body>
+</html>
