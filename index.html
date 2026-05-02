@@ -1,121 +1,210 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Sweet Didi</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-image: url('https://i.ibb.co/XZtV8M37/backgrounds-image.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-      color: #ff4f8b;
-      overflow: hidden;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>🌠 Final Aesthetic Study OS</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><style>
+:root{
+  --bg:#030712;
+  --card:rgba(255,255,255,0.06);
+  --text:#e2e8f0;
+  --accent:#8b5cf6;
+  --accent2:#22d3ee;
+}
 
-    .overlay {
-      background: rgba(255, 255, 255, 0.7);
-      padding: 2rem;
-      border-radius: 25px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-      max-width: 600px;
-      margin: 1rem;
-      position: relative;
-      z-index: 2;
-    }
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:linear-gradient(270deg,#030712,#1e1b4b,#030712);
+  background-size:600% 600%;
+  animation:bgShift 15s ease infinite;
+  color:var(--text);
+  overflow:hidden;
+}
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 5px #ffb6c1;
-    }
+@keyframes bgShift{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
 
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: #333;
-      text-shadow: 1px 1px 2px #fff;
-    }
+.sidebar{
+  position:fixed;
+  left:0;top:0;
+  height:100%;
+  width:220px;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter:blur(20px);
+  padding:20px;
+}
 
-    .photo {
-      width: 250px;
-      height: 250px;
-      border-radius: 20px;
-      object-fit: cover;
-      box-shadow: 0 12px 25px rgba(0,0,0,0.5);
-      border: 5px solid #fff;
-      margin-top: 1.5rem;
-    }
+.sidebar h2{font-size:18px;margin-bottom:20px}
+.sidebar button{
+  width:100%;margin:8px 0;padding:10px;border:none;border-radius:10px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));color:white;cursor:pointer
+}
 
-    .footer {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #666;
-      text-shadow: none;
-      position: relative;
-      z-index: 2;
-    }
+.main{
+  margin-left:240px;
+  padding:20px;
+}
 
-    /* Magical sparkles */
-    .sparkle {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      background: #fff;
-      border-radius: 50%;
-      opacity: 0.8;
-      box-shadow: 0 0 8px 3px #ffb6c1, 0 0 12px 5px #ff69b4;
-      animation: float 6s linear infinite;
-      z-index: 1;
-    }
+h1{
+  font-size:34px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
-    @keyframes float {
-      0% {
-        transform: translateY(0) translateX(0) scale(0.8);
-        opacity: 0.8;
-      }
-      50% {
-        transform: translateY(-150px) translateX(50px) scale(1);
-        opacity: 0.5;
-      }
-      100% {
-        transform: translateY(0) translateX(0) scale(0.8);
-        opacity: 0.8;
-      }
-    }
-  </style>
-</head>
-<body>
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
 
-  <!-- Sparkles -->
-  <div class="sparkle" style="top:10%; left:20%; animation-duration:5s;"></div>
-  <div class="sparkle" style="top:30%; left:70%; animation-duration:6s;"></div>
-  <div class="sparkle" style="top:50%; left:40%; animation-duration:7s;"></div>
-  <div class="sparkle" style="top:70%; left:60%; animation-duration:5.5s;"></div>
-  <div class="sparkle" style="top:20%; left:50%; animation-duration:6.5s;"></div>
+.card{
+  background:var(--card);
+  backdrop-filter:blur(25px);
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.7);
+  transition:0.4s;
+}
 
-  <div class="overlay">
-    <h1> My Sweet Didi 💖</h1>
+.card:hover{
+  transform:translateY(-10px) scale(1.04);
+  box-shadow:0 40px 100px rgba(139,92,246,0.5);
+}
 
-    <p>
-      Hello pretty girl!
-      Thanks for coming by the way😊. Never cry in any problematic situation didi. I feel little unhappy when you cry😢. Keep smiling💕! I am always there for you. Call me when  you feel low or lonely I will be there for you😘. Always there to listen to your problems. Will keep your all scerets as top scerete😉. No need to think twice before sharing with me. May be I can't give solution for your problems but I am there to hear them😁. Never be upset or sad even if you are in your periods and struggling with pain you can always call me or text me🥰.
-    </p>
+input{
+  padding:10px;border-radius:10px;border:none;width:65%;background:rgba(255,255,255,0.1);color:white
+}
 
-    <img src="https://i.ibb.co/yc5MFgZ8/sunshine-1.jpg" alt="My Didi" class="photo" />
-  </div>
+button{
+  padding:10px;border:none;border-radius:10px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  cursor:pointer;color:white
+}
 
-  <div class="footer">
-    Made with ❤ by your Shreya
-  </div>
-</body>
+ul{list-style:none;padding:0}
+li{
+  background:rgba(255,255,255,0.08);
+  margin:8px 0;padding:10px;border-radius:10px;
+  display:flex;justify-content:space-between
+}
+
+.done{text-decoration:line-through;opacity:0.5}
+
+.circle{
+  width:120px;height:120px;border-radius:50%;
+  border:6px solid rgba(255,255,255,0.1);
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;font-weight:600;
+}
+
+.toast{
+  position:fixed;top:20px;right:20px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  padding:12px 20px;border-radius:12px;opacity:0;transition:0.4s
+}
+
+</style></head><body><div class="sidebar">
+  <h2>⚡ Dashboard</h2>
+  <button>Tasks</button>
+  <button>Analytics</button>
+  <button>Focus</button>
+</div><div class="main">
+<h1>🌠 Study OS</h1><div class="grid"><div class="card">
+<h3>Tasks</h3>
+<input id="taskInput" placeholder="Add task">
+<button onclick="addTask()">Add</button>
+<ul id="taskList"></ul>
+</div><div class="card">
+<h3>Progress Ring</h3>
+<div class="circle" id="progressCircle">0%</div>
+</div><div class="card">
+<h3>Timer</h3>
+<h2 id="timer">25:00</h2>
+<button onclick="startTimer()">Start</button>
+</div><div class="card">
+<h3>Analytics</h3>
+<canvas id="chart"></canvas>
+</div></div>
+</div><div id="toast" class="toast">🎉 Amazing Work!</div><script>
+let tasks=JSON.parse(localStorage.getItem('tasks'))||[];
+
+function save(){localStorage.setItem('tasks',JSON.stringify(tasks))}
+
+function addTask(){
+let val=taskInput.value;if(!val)return;
+tasks.push({text:val,done:false});taskInput.value="";
+save();render();
+}
+
+function toggle(i){
+tasks[i].done=!tasks[i].done;
+if(tasks[i].done)showToast();
+save();render();
+}
+
+function render(){
+taskList.innerHTML="";
+tasks.forEach((t,i)=>{
+let li=document.createElement('li');
+li.className=t.done?'done':'';
+li.innerHTML=`${t.text}<button onclick="toggle(${i})">✔</button>`;
+taskList.appendChild(li);
+});
+update();
+}
+
+function update(){
+let done=tasks.filter(t=>t.done).length;
+let percent=tasks.length?(done/tasks.length)*100:0;
+document.getElementById('progressCircle').innerText=Math.round(percent)+"%";
+}
+
+function showToast(){
+let t=document.getElementById('toast');
+t.style.opacity=1;
+setTimeout(()=>t.style.opacity=0,2000);
+confetti();
+}
+
+function confetti(){
+for(let i=0;i<60;i++){
+let c=document.createElement('div');
+c.style.position='fixed';
+c.style.width='6px';c.style.height='10px';
+c.style.background='hsl('+Math.random()*360+',90%,60%)';
+c.style.top='0';c.style.left=Math.random()*100+'%';
+c.style.animation='fall 2s linear';
+document.body.appendChild(c);
+setTimeout(()=>c.remove(),2000);
+}
+}
+
+const style=document.createElement('style');
+style.innerHTML='@keyframes fall{to{transform:translateY(100vh) rotate(360deg)}}';
+document.head.appendChild(style);
+
+function startTimer(){
+let t=1500;
+let iv=setInterval(()=>{
+t--;timer.innerText=Math.floor(t/60)+":"+(t%60).toString().padStart(2,'0');
+if(t<=0){clearInterval(iv);showToast();}
+},1000);
+}
+
+function initChart(){
+new Chart(document.getElementById('chart'),{
+type:'line',
+data:{labels:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],datasets:[{data:[3,4,5,2,6,7,4]}]}
+});
+}
+
+render();
+initChart();
+</script></body>
 </html>
